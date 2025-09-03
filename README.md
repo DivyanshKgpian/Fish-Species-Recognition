@@ -1,4 +1,4 @@
-# Fish-Species-Recognition
+# Fish-Species Recognition and Tracking
 This project demonstrates a deep learning approach to classify fish species from images. It leverages transfer learning with a pre-trained ResNet50 model to achieve high accuracy on a dataset of 23 different fish species. The project includes data augmentation, model training, evaluation, and prediction on new images.
 ## Features
 Model: Utilizes a ResNet50 model pre-trained on ImageNet for powerful feature extraction.  

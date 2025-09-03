@@ -27,3 +27,4 @@ Tarfile: For extracting the initial dataset.
 ## Results
 The model was trained for 100 epochs, achieving a final validation accuracy of 96.34%.   
 The training history shows that the model learned effectively and generalized well to the validation data.
+<img width="547" height="413" alt="image" src="https://github.com/user-attachments/assets/560e20d5-5aec-4a55-8a64-2a562bf0698e" />

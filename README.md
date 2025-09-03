@@ -3,13 +3,13 @@ This project implements a dual-system for fish analysis: a deep learning model f
 The classification component uses transfer learning with a ResNet50 model to identify 23 different fish species with high accuracy.   
 The detection and tracking component uses a custom-trained YOLOv8 model with a BoT-SORT tracker to locate and follow fish in real-time.  
 ## Features
-Image Classification (ResNet50)  
+### Image Classification (ResNet50)  
 Model: Utilizes a ResNet50 model pre-trained on ImageNet for powerful feature extraction.  
 Technique: Employs transfer learning by freezing the convolutional base and training a custom classifier head.  
 Data Augmentation: Increases the dataset size and model robustness through transformations like rotation, shifting, zooming, and flipping.  
 Performance: Achieves a validation accuracy of approximately 96.3%.  
   
-Object Detection and Tracking (YOLOv8)  
+### Object Detection and Tracking (YOLOv8)  
 Custom Dataset: Constructed a custom dataset with more than 500 images using the Label-Img tool and executed object tracking with OpenCV.  
 High-Performance Tracking: Trained the YOLOv8 architecture with the BoT-SORT tracker to achieve a precision of 92.99%, a mean IoU of 0.76, and an mAP50 of 85.59%.  
   

@@ -1,11 +1,18 @@
 # Fish-Species Recognition and Tracking
-This project demonstrates a deep learning approach to classify fish species from images. It leverages transfer learning with a pre-trained ResNet50 model to achieve high accuracy on a dataset of 23 different fish species. The project includes data augmentation, model training, evaluation, and prediction on new images.
+This project implements a dual-system for fish analysis: a deep learning model for species classification from static images and a real-time object detection and tracking system for video.   
+The classification component uses transfer learning with a ResNet50 model to identify 23 different fish species with high accuracy.   
+The detection and tracking component uses a custom-trained YOLOv8 model with a BoT-SORT tracker to locate and follow fish in real-time.  
 ## Features
+Image Classification (ResNet50)  
 Model: Utilizes a ResNet50 model pre-trained on ImageNet for powerful feature extraction.  
 Technique: Employs transfer learning by freezing the convolutional base and training a custom classifier head.  
 Data Augmentation: Increases the dataset size and model robustness through transformations like rotation, shifting, zooming, and flipping.  
-Performance: Achieves a high validation accuracy of approximately 96.3%.  
-
+Performance: Achieves a validation accuracy of approximately 96.3%.  
+  
+Object Detection and Tracking (YOLOv8)  
+Custom Dataset: Constructed a custom dataset with more than 500 images using the Label-Img tool and executed object tracking with OpenCV.  
+High-Performance Tracking: Trained the YOLOv8 architecture with the BoT-SORT tracker to achieve a precision of 92.99%, a mean IoU of 0.76, and an mAP50 of 85.59%.  
+  
 ## Workflow Pipeline
 The project follows a standard deep learning pipeline:  
 Data Extraction: The initial dataset is extracted from a .tar archive.  
@@ -17,13 +24,12 @@ Evaluation: The model's performance is evaluated on the test set, and accuracy/l
 Prediction: The trained model is used to predict the species of a new, unseen fish image.  
 
 ## Technologies Used  
-TensorFlow & Keras: For building and training the deep learning model.  
-NumPy: For numerical operations, particularly for handling image arrays.
-Matplotlib: For plotting the training history (accuracy and loss).
-split-folders: A utility to split image datasets into training and validation sets.
-OpenCV: For image processing tasks like reading and resizing.
-Tarfile: For extracting the initial dataset.
-
+Technologies Used  
+Deep Learning: TensorFlow, Keras, YOLOv8    
+Computer Vision: OpenCV  
+Data & ML: NumPy, Matplotlib, split-folders  
+Annotation & Tracking: Label-Img, BoT-SORT  
+  
 ## Results
 The model was trained for 100 epochs, achieving a final validation accuracy of 96.34%.   
 The training history shows that the model learned effectively and generalized well to the validation data.
